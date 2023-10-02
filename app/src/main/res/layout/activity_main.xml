@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <!-- Mortgage Amount Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:layout_marginBottom="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textViewAmountTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mortgage Amount"
+                android:textSize="16sp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"/>
+
+            <EditText
+                android:id="@+id/editTextAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewAmountTitle"
+                android:layout_marginTop="8dp"
+                android:hint="Enter amount"
+                android:inputType="numberDecimal" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Tenure Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewTenure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:layout_below="@+id/cardViewAmount"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textViewTenureTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tenure (in months)"
+                android:textSize="16sp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"/>
+
+            <EditText
+                android:id="@+id/editTextTenure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewTenureTitle"
+                android:layout_marginTop="8dp"
+                android:hint="Enter tenure"
+                android:inputType="number" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Interest Rate Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewInterestRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:layout_below="@+id/cardViewTenure"
+        android:layout_marginTop="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textViewInterestRateTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Interest Rate (%)"
+                android:textSize="16sp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"/>
+
+            <EditText
+                android:id="@+id/editTextInterestRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewInterestRateTitle"
+                android:layout_marginTop="8dp"
+                android:hint="Enter interest rate"
+                android:inputType="numberDecimal" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Calculate button -->
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/cardViewInterestRate"
+        android:layout_marginTop="24dp"
+        android:text="Calculate" />
+
+</RelativeLayout>
